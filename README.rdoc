@@ -1,0 +1,3 @@
+= acts_as_featured
+
+Feature your models on your site's special spots.
