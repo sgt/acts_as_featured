@@ -1,3 +1,30 @@
 = acts_as_featured
 
 Feature your models on your site's special spots.
+
+== Setup
+
+Install the plugin:
+
+	script/plugin install git://github.com/sgt/acts_as_featured.git
+	
+Generate the features
+
+== Usage
+
+In the model:
+
+	class Article < ActiveRecord::Base
+		acts_as_featured
+	end
+
+Assigning models to feature spots:
+
+	article = Article.create(:subject=>'foo', :body=>'bar')
+	
+	# Assign the article to a feature spot (removes previous)
+	article.feature_at :top_right_spot
+
+Getting the featured object:
+
+	@article = Article.featured_at :top_right_spot
