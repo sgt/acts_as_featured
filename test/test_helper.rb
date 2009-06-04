@@ -17,7 +17,7 @@ class ActiveSupport::TestCase
     
     load File.join( File.dirname(__FILE__), 'data/schema.rb')
     load File.expand_path( File.dirname(__FILE__) + '/../generators/acts_as_featured_migration/templates/migration.rb' )
-    ActsAsFeaturedMigration.migrate :up
+    CreateFeatures.migrate :up
   end
   
   Factory.define :article do |a|
