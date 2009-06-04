@@ -5,7 +5,7 @@ class Test::Unit::TestCase
     klass = self.get_model_class
   
     should_have_class_methods :acts_as_featured
-    should_have_instance_methods :featured_at?, :featured_at, :fearure_at!
+    should_have_instance_methods :featured_at?, :featured_at, :feature_at!
   end
 
   private
