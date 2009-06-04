@@ -28,7 +28,7 @@ Assigning models to feature spots:
 	article = Article.create(:subject=>'foo', :body=>'bar')
 	
 	# Assign the article to a feature spot (removes previous)
-	article.feature_at :top_right_spot
+	article.feature_at! :top_right_spot
 
 Getting the featured object:
 
