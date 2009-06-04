@@ -2,13 +2,18 @@
 
 Feature your models on your site's special spots.
 
+(Tested only on Rails 2.3.2 as of now)
+
 == Setup
 
 Install the plugin:
 
 	script/plugin install git://github.com/sgt/acts_as_featured.git
 	
-Generate the features
+Add the features table to your database:
+
+	script/generate acts_as_featured_migration
+	rake db:migrate
 
 == Usage
 

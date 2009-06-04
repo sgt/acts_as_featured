@@ -1,4 +1,4 @@
-class ActsAsFeaturesMigration < ActiveRecord::Migration
+class ActsAsFeaturedMigration < ActiveRecord::Migration
   def self.up
     create_table :features do |t|
       t.string :name, :null=>false
