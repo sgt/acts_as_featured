@@ -1,3 +1,4 @@
+# The model for named feature spots.
 class Feature < ActiveRecord::Base
   validates_presence_of :name, :featured
   validates_uniqueness_of :name

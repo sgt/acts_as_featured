@@ -1,12 +1,14 @@
-module ActiveRecord
-  module Acts
-    module Featured
+module ActiveRecord # :nodoc:
+  module Acts # :nodoc:
+    module Featured # :nodoc:
       
       def self.included(base)
         base.extend(ClassMethods)
       end
       
-      module ClassMethods
+      # Just add +acts_as_featured+ to your model.
+      module ClassMethods # :nodoc:
+        # No options as of now.
         def acts_as_featured
           has_many :features, :as => :featured, :dependent => :destroy, :readonly => true
           
@@ -14,7 +16,7 @@ module ActiveRecord
         end
       end
       
-      module InstanceMethods
+      module InstanceMethods # :nodoc:
         # Set this object to be featured at the designated named feature spot.
         def feature_at!(feature_name)
           raise ArgumentError, "feature name cannot be nil" if feature_name.nil?
