@@ -33,3 +33,9 @@ Assigning models to feature spots:
 Getting the featured object:
 
 	@article = Article.featured_at :top_right_spot
+
+Or directly in the view:
+
+	<% feature :top_spot do |f| %>
+		<%= link_to f, f.name %>
+	<% end %>
