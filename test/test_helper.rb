@@ -3,6 +3,7 @@ require 'test/unit'
 require 'active_support'
 require 'active_support/test_case'
 require 'active_record'
+require 'action_view'
 require 'factory_girl'
 
 require File.expand_path( File.dirname(__FILE__) + '/../init' )
