@@ -10,8 +10,7 @@ module ActsAsFeaturedHelper
   
   # Pass the featured object to the block, if the object exists.
   def feature(feature_name, &block)
-    object = Feature.object_featured_at(feature_name)
-    yield object unless object.nil?
+    yield Feature.object_featured_at(feature_name)
   end
   
 end

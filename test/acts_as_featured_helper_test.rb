@@ -10,7 +10,7 @@ class FeaturedTest < ActiveSupport::TestCase
 
   test "empty feature" do
     feature :lala do |f|
-      fail "this line should not be reached - 'feature' method should not yield at all"
+      assert_nil f
     end
   end
 
