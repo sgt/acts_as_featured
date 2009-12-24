@@ -4,7 +4,7 @@ require 'rake/testtask'
 desc 'Default: run unit tests.'
 task :default => :test
 
-desc 'Test the xujagin plugin.'
+desc 'Test the acts_as_featured plugin.'
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
   t.libs << 'test'
