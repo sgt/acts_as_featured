@@ -14,6 +14,13 @@ class FeaturedTest < ActiveSupport::TestCase
     end
   end
 
+  test "empty feature with default value" do
+    article = Factory(:article)
+    feature :lala, article do |f|
+      assert_equal article, f
+    end
+  end
+
   test "non-empty feature" do
     article = Factory.create :article
     article.feature_at! :top_spot
